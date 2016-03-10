@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+  head
+    title= Title
+
+    link(rel="stylesheet", href="/styles/importer.css")
+  body
+    block nav
+      .ui.main.menu.borderless
+        .ui.text.container
+          .header.item PSI
+          a.item(href='/') Kolege
+          a.item(href='/timovi') Timovi
+          a.item.floated.right Profil
+
+    block content
