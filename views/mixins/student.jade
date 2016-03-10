@@ -1,0 +1,13 @@
+mixin student(name, image, role, skills)
+  .ui.item
+    a.ui.tiny.image
+      img(src=image)
+    .ui.content
+      a.header= name
+      a.ui.right.floated.button.primary Pozovi
+      .meta
+        p= role
+      .description
+        span.ui.right.floated
+          each skill in skills
+            .ui.label= skill
