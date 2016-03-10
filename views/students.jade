@@ -1,0 +1,13 @@
+extends layout.jade
+
+include mixins/student.jade
+
+block content
+  .ui.text.container
+    .ui.divided.items
+
+      +student('Djukic Jovan', '/images/logo.png', 'Organizator', ['Java', 'OOP'])
+      +student('Aleksa Pavlovic', '/images/logo.png', 'Frontender', ['SASS'])
+      +student('Miljkovic Ivan', '/images/logo.png', 'Backender', ['Python'])
+      +student('Djordje Simovic', '/images/logo.png', 'Backender', ['Data Science'])
+
