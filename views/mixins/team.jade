@@ -1,0 +1,22 @@
+mixin team(title, image, members, wanted_skills)
+  .ui.item
+    .ui.small.image
+      img(src=image)
+    .ui.content
+      .header= title
+      .description
+        .ui.list
+          each member in members
+            .item
+              a.ui.label(class=member.button_color)= member.name
+                .detail= member.proffession
+    .ui.right.floated
+      .row
+        .ui.right.floated.button.primary Prijavi se
+      .two.column.grid.stackable
+        .row
+          h4 Trazi se:
+        each skill in wanted_skills
+          .column
+            a.ui.label.left= skill
+        
