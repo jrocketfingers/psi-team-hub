@@ -1,43 +1,47 @@
 extends layout.jade
 
+include mixins/team.jade
+
 block content
   .ui.text.container
     .ui.divided.items
-      .ui.item
-        .ui.small.image
-          img(src='/images/logo.png')
-        .ui.content
-          .header Slackeri
-          .description
-            .ui.list
-              .item
-                a.ui.blue.label Djukic Jovan
-                  .detail organizator
-              .item
-                a.ui.green.label Miljkovic Ivan
-                  .detail backender
-              .item
-                a.ui.orange.label Simovic Djordje
-                  .detail data scientist
-        .ui.right.floated
-          h4 Trazi se frontender
-          .ui.right.floated.button.primary Prijavi se
+      +team('Slackeri', 
+            '/images/logo.png',
+            [
+              {'name': 'Djukic Jovan','proffession': 'organizator', 'button_color': 'blue'},
+              {'name': 'Miljkovic Ivan','proffession': 'backender', 'button_color': 'orange'},
+              {'name': 'Simovic Djordje', 'proffession': 'data scientist', 'button_color': 'green'}
+            ],
+            [
+              'frontender',
+              'designer'
+            ]
+          )
 
+      +team('The Who',
+            '/images/question.jpg',
+            [
+              {'name': 'Roger Daltrey', 'proffession': 'pevac', 'button_color': 'yellow'},
+              {'name': 'Pete Townshend', 'proffession': 'gitarista', 'button_color': 'purple'}
+            ],
+            [
+              'bubnjar',
+              'basista',
+              'tonac'
+            ]
+          )
 
-      .ui.item
-        .ui.small.image
-          img(src='/images/question.jpg')
-        .ui.content
-          .header The Who
-          .description
-            .ui.list
-              .item
-                a.ui.black.label Roger Daltrey
-                  .detail pevac
-              .item
-                a.ui.gray.label Pete Townshend
-                  .detail gitarista
-
-        .ui.right.floated
-          h4 Trazi se bubnjar
-          .ui.right.floated.button.primary Prijavi se
+      +team('Tim Raketa',
+            '/images/team_rocket.png',
+            [
+              {'name': 'James', 'proffession': 'smarac', 'button_color': 'blue'},
+              {'name': 'Jessie', 'proffession': 'smaracica', 'button_color': 'pink'},
+              {'name': 'Meow', 'proffession': 'meow-tako je', 'button_color': 'yellow'}
+            ],
+            [
+              'pikachu',
+              'charizard',
+              'bulbasaur',
+              'meowtwo'
+            ]
+          )
