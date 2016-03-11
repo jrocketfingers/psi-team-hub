@@ -38,6 +38,10 @@ module.exports.routes = {
 
   '/timovi': {
     view: 'timovi'
+  },
+
+  '/profile': {
+    view: 'profile'
   }
 
   /***************************************************************************
