@@ -1,0 +1,42 @@
+
+.description-first-part{
+  height: 6em;
+}
+
+.description-second-part{
+  height: 3em;
+}
+
+.team-image{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ui .content > .header{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.student-profile-ui {
+  width: 100%;
+  height: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.profile-label{
+  width: 120%;
+  height: 4em;
+  padding: 1em 1em 1em 1em;
+  text-align: center;
+}
+
+.profile-label-row{
+  padding-bottom: 2em;
+}
+
+.profile-description-column{
+  padding-bottom: 1em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
