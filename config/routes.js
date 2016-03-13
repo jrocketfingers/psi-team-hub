@@ -37,8 +37,14 @@ module.exports.routes = {
   },
 
   '/timovi': {
-    view: 'timovi'
-  }
+    view: 'teams'
+  },
+
+  '/register': 'UserController.register',
+
+  '/login': {
+    view: 'login'
+  },
 
   /***************************************************************************
   *                                                                          *
