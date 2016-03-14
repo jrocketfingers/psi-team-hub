@@ -1,0 +1,12 @@
+extends layout
+
+include mixins/student_profile
+
+block content
+  .ui.container.student-profile-ui
+    +student_profile(
+                'Djordje Simovic', // name
+                '/images/logo.png', // image path
+                'Data Scientist', // role
+                ['Machine Learning', 'Scikit-learn', 'Predictive modeling', 'Java', 'Python'] // skills
+              )

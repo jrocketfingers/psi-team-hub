@@ -8,10 +8,12 @@ html(lang="en")
   body
     block nav
       .ui.main.menu.borderless
-        .ui.text.container
           .header.item PSI
           a.item(href='/') Kolege
           a.item(href='/timovi') Timovi
-          a.item.floated.right Profil
+          a.item.floated.right(href='/profile') Profil
 
     block content
+
+    script(src='//code.jquery.com/jquery-1.12.0.min.js')
+    script(src='/js/functions.js')

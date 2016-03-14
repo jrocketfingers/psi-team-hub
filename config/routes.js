@@ -46,6 +46,10 @@ module.exports.routes = {
     view: 'login'
   },
 
+  '/profile': {
+    view: 'profile'
+  }
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

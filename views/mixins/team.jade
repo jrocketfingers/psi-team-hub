@@ -1,22 +1,35 @@
 mixin team(title, image, members, wanted_skills)
-  .ui.item
-    .ui.small.image
-      img(src=image)
-    .ui.content
-      .header= title
-      .description
-        .ui.list
-          each member in members
-            .item
-              a.ui.label(class=member.button_color)= member.name
-                .detail= member.proffession
-    .ui.right.floated
-      .row
-        .ui.right.floated.button.primary Prijavi se
-      .two.column.grid.stackable
-        .row
-          h4 Trazi se:
-        each skill in wanted_skills
-          .column
-            a.ui.label.left= skill
-        
+	.ui.item
+		.ui.grid.container
+			.row
+				.four.wide.column
+					.ui.small.image
+						img.team-image(src=image)
+				.ten.wide.column
+					.ui.content
+						.header= title
+						.description-first-part
+							.description
+								.ui.list
+									each member in members
+										.item
+											a.ui.label(href='/profile', class=member.button_color)= member.name
+												.detail= member.proffession
+						.description-second-part
+							a.ui.label.left.black Trazi se
+							each skill in wanted_skills
+								a.ui.label.left= skill
+				.two.wide.column
+					.ui.button.primary Prijavi se
+	.ui.modal
+		i.close.icon
+		.header
+			| Modal Title
+		.image.content
+			.image
+				| An image can appear on left or an icon
+			.description
+				| A description can appear on the right
+		.actions
+			.ui.button Cancel
+			.ui.button OK
