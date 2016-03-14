@@ -3,18 +3,19 @@ mixin team(title, image, members, wanted_skills)
     .ui.small.image
       img.team-image(src=image)
     .ui.content
-      .header= title
-      .ui.grid
+      .ui.stackable.grid
         .twelve.wide.column
+          h1= title
           .ui.list
             each member in members
               .item
                 a.ui.label.gray(href='/profile')= member.name
                   .detail= member.proffession
 
-        .four.wide.right.aligned.column
+        .four.wide.column
+          h4 Prijavi se kao:
           .ui.list
             each skill in wanted_skills
               .item.role(data-content="Prijavi se!")
-                a.ui.label.stretched.centered.text.blue= skill
+                a.ui.button.stretched.centered.text.blue= skill
 
