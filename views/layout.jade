@@ -9,11 +9,11 @@ html(lang="en")
     block nav
       .ui.main.menu.borderless
           .header.item PSI
-          a.item(href='/') Kolege
-          a.item(href='/timovi') Timovi
-          a.item.floated.right(href='/profile') Profil
-
-    block content
+          a.switch.item(href='/') Kolege
+          a.switch.item(href='/timovi') Timovi
+          a.switch.item.floated.right(href='/profile') Profil
+    div(id='main-content')
+      block content
 
     script(src='//code.jquery.com/jquery-1.12.0.min.js')
     script(src='/js/functions.js')
