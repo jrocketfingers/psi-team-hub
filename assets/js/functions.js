@@ -1,7 +1,12 @@
+$('#login').on('click', function(){
 
-$('.ui.button.primary').on('click', function(){
+  $('#login-modal').modal('show');
 
-  $('.ui.modal').modal('show');
+});
+
+$('#register').on('click',function(){
+
+  $('#register-modal').modal('show');
 
 });
 
