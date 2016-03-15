@@ -1,20 +1,24 @@
-mixin student_profile(name, image, role, skills)
-    .ui.content
-      .ui.two.column.grid
-        .column
-          .ui.two.column.grid
-            .column
-              a.ui.big.image
-                img(src=image)
-            .column
-              .row.profile-label-row
-                .ui.label.black.profile-label= name
-              .row.profile-label-row
-                .ui.label.red.profile-label= role
-        .column
-          .ui.two.column.row
-            each skill in skills
-              .profile-description-column.column
-                .ui.label= skill
-        .row
-          p I am a 3rd year Software Engineering student at the University of Belgrade, Faculty of Electrical Engineering. My skills are focused on development of native applications and design & development of Machine Learning algorithms. I enjoy solving algorithmic challenges, and the process of building various Machine Learning algorithms. My interest in Software Development comes from my early days as a gamer. As for Machine Learning, I was amazed at the idea of systems working without being explicitly programmed. I have a keen interest in Artifical Intelligence and Data Science, mainly Neural Networks and the rising area of Deep Learning. With the rise of Big Data and the computing power in the last decade, if you're not utilizing extracted knowledge from the data that surrounds you, it feels like you're one step behind. I aim at being one step ahead. Apart from my interest in Information Theory, I'm also interested in Astronomy, Quantum Mechanics, and Quantum Information.
+mixin student_profile(name, image, role, skills, team, team_members, team_link)
+  .ui.two.column.grid
+    .column
+      a.ui.medium.image
+        img(src=image)
+      .ui.segment.borderless
+        h4= name
+        .ui.label.red= role
+    .column
+      a.ui.medium.image
+        img(src=image)
+      .row
+        a.ui.label.black.right.floated(href=team_link)= team
+      .row
+        each member in team_members
+          .ui.label.right.floated= member
+  .ui.segment.borderless
+    h4 Skills
+    each skill in skills
+      .ui.label= skill
+  .ui.segment.borderless
+    h4 Description
+    p I am a 3rd year Software Engineering student at the University of Belgrade, Faculty of Electrical Engineering. My skills are focused on development of native applications and design & development of Machine Learning algorithms. I enjoy solving algorithmic challenges, and the process of building various Machine Learning algorithms. My interest in Software Development comes from my early days as a gamer. As for Machine Learning, I was amazed at the idea of systems working without being explicitly programmed. I have a keen interest in Artifical Intelligence and Data Science, mainly Neural Networks and the rising area of Deep Learning. With the rise of Big Data and the computing power in the last decade, if you're not utilizing extracted knowledge from the data that surrounds you, it feels like you're one step behind. I aim at being one step ahead. Apart from my interest in Information Theory, I'm also interested in Astronomy, Quantum Mechanics, and Quantum Information.
+
