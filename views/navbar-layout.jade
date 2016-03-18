@@ -4,7 +4,7 @@ block nav
   .ui.thin.sidebar.inverted.vertical.menu
     a.switch.drawer.item(href='/') PSI
     a.switch.drawer.item(href='/students') Kolege
-    a.switch.drawer.item(href='/timovi') Timovi
+    a.switch.drawer.item(href='/teams') Timovi
     a.switch.drawer.item(href='/profile') Profil
     a.item.team.creation Napravi tim
   .ui.grid
@@ -16,11 +16,11 @@ block nav
 
   #team-creation-modal.ui.basic.modal
     .ui.icon.header
-      i.protect.icon
+      i.connectdevelop.icon
       | Forma za pravljenje tima
     .content.center.aligned
       .six.wide.stretched.column
-        form.ui.form(action='/timovi', method='post')
+        form.ui.form(action='/teams', method='post')
           .field
             .two.fields
               .field
@@ -46,4 +46,4 @@ block nav
                 .ui.red.deny.button
                   | Nazad
               .column.left.aligned
-                input.ui.positive.button.switch.drawer(type='submit', placeholder='Prijavi se')
+                a.ui.positive.button.switch.drawer(href='/teams') Prijavi se

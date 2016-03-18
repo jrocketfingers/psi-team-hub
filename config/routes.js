@@ -39,7 +39,7 @@ module.exports.routes = {
     view: 'students'
   },
 
-  '/timovi': {
+  '/teams': {
     view: 'teams'
   },
 
