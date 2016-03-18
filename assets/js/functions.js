@@ -78,3 +78,9 @@ $(document).ready(function() {
     }
 
 });
+
+$('#nav-drawer-button').on('click', function(){
+
+  $('.ui.sidebar').sidebar('toggle');
+
+});
