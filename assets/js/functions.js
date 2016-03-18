@@ -63,6 +63,11 @@ $(document).ready(function() {
 
         newLocation = this.href;
 
+        if($(this).hasClass('drawer')){
+
+            $('.ui.sidebar').sidebar('toggle');
+        }
+
         $('#main-content').fadeOut(500, newpage);
     });
 
