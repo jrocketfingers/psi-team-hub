@@ -1,20 +1,31 @@
-mixin student_profile(name, image, role, skills)
-    .ui.content
-      .ui.two.column.grid
-        .column
-          .ui.two.column.grid
-            .column
-              a.ui.big.image
-                img(src=image)
-            .column
-              .row.profile-label-row
-                .ui.label.black.profile-label= name
-              .row.profile-label-row
-                .ui.label.red.profile-label= role
-        .column
-          .ui.two.column.row
-            each skill in skills
-              .profile-description-column.column
-                .ui.label= skill
-        .row
-          p I am a 3rd year Software Engineering student at the University of Belgrade, Faculty of Electrical Engineering. My skills are focused on development of native applications and design & development of Machine Learning algorithms. I enjoy solving algorithmic challenges, and the process of building various Machine Learning algorithms. My interest in Software Development comes from my early days as a gamer. As for Machine Learning, I was amazed at the idea of systems working without being explicitly programmed. I have a keen interest in Artifical Intelligence and Data Science, mainly Neural Networks and the rising area of Deep Learning. With the rise of Big Data and the computing power in the last decade, if you're not utilizing extracted knowledge from the data that surrounds you, it feels like you're one step behind. I aim at being one step ahead. Apart from my interest in Information Theory, I'm also interested in Astronomy, Quantum Mechanics, and Quantum Information.
+mixin student_profile(name, personal_image, team_image, role, skills, team, team_members, team_link)
+  .ui.two.column.grid
+    .column
+      .ui.grid
+        .eleven.wide.column
+          .ui.segment.borderless.right.aligned
+            h4.double.size= name
+          .ui.segment.borderless.right.aligned
+            .ui.label.red.double.size= role
+        .five.wide.column
+          a.ui.medium.image
+            img(src=personal_image)
+    .column
+      .ui.grid
+        .five.wide.column
+          a.ui.medium.image
+            img(src=team_image)
+        .eleven.wide.column
+          .ui.segment.borderless.left.aligned
+            a.ui.label.black.double.size(href=team_link)= team
+          .ui.segment.borderless.left.aligned
+            each member in team_members
+              .ui.label.right.floated.profile.team.member= member
+  .ui.segment.borderless.text-align-center
+    h4.double.size Skills
+    each skill in skills
+      .ui.label.profile.skill= skill
+  .ui.segment.borderless.text-align-center
+    h4.double.size Description
+    p.profile.description.paragraph Vivamus lacinia turpis nec nisl ullamcorper, quis hendrerit enim posuere. Vestibulum tincidunt porttitor tempus. Curabitur dignissim mauris vel augue tempus dignissim. Praesent id semper eros. In dictum, tortor ut sagittis fermentum, libero ex facilisis tortor, pellentesque hendrerit mauris augue nec enim. Donec ac metus volutpat, fringilla eros sed, dapibus erat. Etiam lacinia, neque ut efficitur porta, sapien lorem luctus felis, sit amet rutrum lorem tortor non augue. Curabitur malesuada luctus suscipit. Cras euismod gravida sapien, nec luctus libero finibus ac. Vestibulum placerat tortor vel enim pretium, ut convallis dolor tristique. Maecenas in elementum nibh, a rhoncus tellus. Vestibulum at nibh a urna dictum hendrerit. Praesent id laoreet massa. Sed rhoncus eget nisl eu ultricies. Donec vitae nunc a sem ornare eleifend. Vivamus et turpis enim.
+

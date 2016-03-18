@@ -1,4 +1,4 @@
-extends layout
+extends navbar-layout
 
 include mixins/team
 
@@ -8,9 +8,9 @@ block content
       +team('Slackeri',
             '/images/logo.png',
             [
-              {'name': 'Djukic Jovan','proffession': 'organizator', 'button_color': 'blue'},
-              {'name': 'Miljkovic Ivan','proffession': 'backender', 'button_color': 'orange'},
-              {'name': 'Simovic Djordje', 'proffession': 'data scientist', 'button_color': 'green'}
+              {'name': 'Djukic Jovan','proffession': 'organizator'},
+              {'name': 'Miljkovic Ivan','proffession': 'backender'},
+              {'name': 'Simovic Djordje', 'proffession': 'data scientist'}
             ],
             [
               'frontender',
@@ -21,8 +21,8 @@ block content
       +team('The Who',
             '/images/question.jpg',
             [
-              {'name': 'Roger Daltrey', 'proffession': 'pevac', 'button_color': 'yellow'},
-              {'name': 'Pete Townshend', 'proffession': 'gitarista', 'button_color': 'purple'}
+              {'name': 'Roger Daltrey', 'proffession': 'pevac'},
+              {'name': 'Pete Townshend', 'proffession': 'gitarista'}
             ],
             [
               'bubnjar',
@@ -34,9 +34,9 @@ block content
       +team('Tim Raketa',
             '/images/team_rocket.png',
             [
-              {'name': 'James', 'proffession': 'smarac', 'button_color': 'blue'},
-              {'name': 'Jessie', 'proffession': 'smaracica', 'button_color': 'pink'},
-              {'name': 'Meow', 'proffession': 'meow-tako je', 'button_color': 'yellow'}
+              {'name': 'James', 'proffession': 'smarac'},
+              {'name': 'Jessie', 'proffession': 'smaracica'},
+              {'name': 'Meow', 'proffession': 'meow-tako je'}
             ],
             [
               'pikachu',
@@ -45,6 +45,24 @@ block content
               'meowtwo'
             ]
           )
+  #team-modal.ui.basic.modal
+    .ui.icon.header
+      i.protect.icon
+      | Prijava
+    .content.text-align-center
+      p
+        | Prijavljujete se za izabrani tim, da li je to vas konacan odgovor? :D
+    .actions
+      .ui.three.column.grid
+        .column
+        .column
+          .two.fluid.ui.inverted.buttons
+            #subscribe-reject.ui.red.basic.inverted.button
+              i.remove.icon
+              |         Ne
+            #subscribe-accept.ui.green.basic.inverted.button
+              i.checkmark.icon
+              |         Da
 
 block scripts
   scripts(src='/js/teams/popups.js')

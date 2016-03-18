@@ -1,4 +1,4 @@
-extends layout
+extends navbar-layout
 
 include mixins/student
 
@@ -10,4 +10,22 @@ block content
       +student('Aleksa Pavlovic', '/images/logo.png', 'Frontender', ['SASS'])
       +student('Miljkovic Ivan', '/images/logo.png', 'Backender', ['Python'])
       +student('Djordje Simovic', '/images/logo.png', 'Backender', ['Data Science'])
+  #student-modal.ui.basic.modal
+    .ui.icon.header
+      i.protect.icon
+      | Poziv
+    .content.text-align-center
+      p
+        | Pozivate odabranog clana u vas tim, da li je to vas konacan odgovor? :D
+    .actions
+      .ui.three.column.grid
+        .column
+        .column
+          .two.fluid.ui.inverted.buttons
+            #call-reject.ui.red.basic.inverted.button
+              i.remove.icon
+              |         Ne
+            #call-accept.ui.green.basic.inverted.button
+              i.checkmark.icon
+              |         Da
 

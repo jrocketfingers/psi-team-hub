@@ -1,12 +1,16 @@
-extends layout
+extends navbar-layout
 
 include mixins/student_profile
 
 block content
-  .ui.container.student-profile-ui
+  .ui.container
     +student_profile(
                 'Djordje Simovic', // name
                 '/images/logo.png', // image path
+                '/images/team_rocket.png',
                 'Data Scientist', // role
-                ['Machine Learning', 'Scikit-learn', 'Predictive modeling', 'Java', 'Python'] // skills
+                ['Machine Learning', 'Scikit-learn', 'Predictive modeling', 'Java', 'Python'], // skills
+                'Tim Raketa', // team name
+                ['Jessie', 'James', 'Meow'], // team members
+                '/teams'
               )

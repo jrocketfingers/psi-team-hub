@@ -4,15 +4,12 @@ html(lang="en")
     title= Title
 
     link(rel="stylesheet", href="/styles/importer.css")
+    link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css')
     block styles
   body
     block nav
-      .ui.main.menu.borderless
-          .header.item PSI
-          a.switch.item(href='/') Kolege
-          a.switch.item(href='/timovi') Timovi
-          a.switch.item.floated.right(href='/profile') Profil
-    div(id='main-content')
+
+    #main-content
       block content
 
     script(src='//code.jquery.com/jquery-1.12.0.min.js')

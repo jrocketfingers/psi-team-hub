@@ -1,10 +1,10 @@
 mixin student(name, image, role, skills)
   .ui.item
-    a.ui.tiny.image
+    a.ui.tiny.image(href='/profile')
       img(src=image)
     .ui.content
-      a.header= name
-      a.ui.right.floated.button.primary Pozovi
+      a.header(href='/profile')= name
+      a.ui.right.floated.button.primary.call.student Pozovi
       .meta
         p= role
       .description

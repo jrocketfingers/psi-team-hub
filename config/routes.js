@@ -31,12 +31,15 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-
   '/': {
+    view: 'index'
+  },
+
+  '/students': {
     view: 'students'
   },
 
-  '/timovi': {
+  '/teams': {
     view: 'teams'
   },
 
