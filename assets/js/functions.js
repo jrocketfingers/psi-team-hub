@@ -50,6 +50,24 @@ $('#call-reject').on('click', function(){
 
 });
 
+$('.team.creation').on('click', function(){
+
+  $('#team-creation-modal').modal('show');
+
+});
+
+$('#team-done').on('click', function(){
+
+  $('#team-creation-modal').modal('hide');
+
+});
+
+$('#team-close').on('click', function(){
+
+  $('#team-creation-modal').modal('hide');
+
+});
+
 
 $(document).ready(function() {
 
