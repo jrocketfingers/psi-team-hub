@@ -75,7 +75,7 @@ $(document).ready(function() {
 
     $('#main-content').fadeIn(500);
 
-    $('a.switch').click(function(event) {
+    $('.switch').click(function(event) {
 
         event.preventDefault();
 
