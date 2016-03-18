@@ -13,9 +13,12 @@ mixin team(title, image, members, wanted_skills)
                   .detail= member.proffession
 
         .four.wide.column
-          h4 Prijavi se kao:
           .ui.list
             each skill in wanted_skills
               .item.role(data-content="Prijavi se!")
-                a.ui.button.stretched.centered.text.blue= skill
+                .ui.move.right.reveal
+                  .visible.content.full.width
+                    a.ui.button.stretched.centered.text.blue= skill
+                  .hidden.content
+                    .ui.button.stretched.centered.text.green.team.subscribe Prijavi se!
 
