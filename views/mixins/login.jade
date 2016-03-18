@@ -1,0 +1,27 @@
+mixin login(type, route)
+  #full.ui.middle.aligned.center.aligned.grid
+      .ten.wide.stretched.column
+        form.ui.form(action=route, method='post')
+          h1.left.aligned.ui.dividing.header= type
+          .field
+            .two.fields
+              .field
+                input(type="text", name="first_name", placeholder="Ime")
+              .field
+                input(type="text", name="last_name", placeholder="Prezime")
+          block
+          .field
+              input(type="password", name="password", placeholder="Password")
+          .actions
+            .ui.two.column.grid
+              .column
+                .ui.black.deny.button.aligned.center
+                  | Nazad
+              .column
+                input.ui.positive.aligned.center.button(type='submit', placeholder='Prijavi se')
+      .four.wide.streched.column
+        if block
+          P Hvala sto se registrujete na nasem servisu. Mozete biti sigurno da cemo vam pruziti najbolji uslugu mogucu.
+        else
+          p Nemas account? Registruj se
+          #register.ui.button.primary Register

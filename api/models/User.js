@@ -8,7 +8,25 @@
 module.exports = {
 
   attributes: {
+    username: {
+      type: 'string',
+      unique: true
+    },
 
+    indeks: {
+      type: 'string',
+      unique: true
+    },
+
+    roles: {
+      collection: 'Role',
+      via: 'users'
+    },
+
+    //skills: {
+      //collection: 'Skill',
+      //via: 'skills'
+    //}
   }
 };
 
