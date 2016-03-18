@@ -1,0 +1,24 @@
+mixin team(title, image, members, wanted_skills)
+  .ui.item
+    .ui.small.image
+      img.team-image(src=image)
+    .ui.content
+      .ui.stackable.grid
+        .twelve.wide.column
+          h1= title
+          .ui.list
+            each member in members
+              .item
+                a.ui.label.gray(href='/profile')= member.name
+                  .detail= member.proffession
+
+        .four.wide.column
+          .ui.list
+            each skill in wanted_skills
+              .item.role(data-content="Prijavi se!")
+                .ui.move.right.reveal
+                  .visible.content.full.width
+                    a.ui.button.stretched.centered.text.blue= skill
+                  .hidden.content
+                    .ui.button.stretched.centered.text.green.team.subscribe Prijavi se!
+
