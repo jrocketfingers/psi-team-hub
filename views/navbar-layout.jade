@@ -1,8 +1,14 @@
 extends layout
 
 block nav
-  .ui.main.menu.borderless
-    a.switch.item(href='/') PSI
-    a.switch.item(href='/students') Kolege
-    a.switch.item(href='/timovi') Timovi
-    a.switch.item.floated.right(href='/profile') Profil
+  .ui.thin.sidebar.inverted.vertical.menu
+    a.switch.drawer.item(href='/') PSI
+    a.switch.drawer.item(href='/students') Kolege
+    a.switch.drawer.item(href='/timovi') Timovi
+    a.switch.drawer.item(href='/profile') Profil
+  .ui.grid
+    .four.column.row
+      .column
+        .ui.grid
+          .centered.column.text-align-center
+            i.big.sidebar.icon.padded(id='nav-drawer-button')
