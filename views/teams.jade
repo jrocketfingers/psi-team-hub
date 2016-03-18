@@ -45,6 +45,24 @@ block content
               'meowtwo'
             ]
           )
+  #team-modal.ui.basic.modal
+    .ui.icon.header
+      i.protect.icon
+      | Prijava
+    .content.text-align-center
+      p
+        | Prijavljujete se za izabrani tim, da li je to vas konacan odgovor? :D
+    .actions
+      .ui.three.column.grid
+        .column
+        .column
+          .two.fluid.ui.inverted.buttons
+            #subscribe-reject.ui.red.basic.inverted.button
+              i.remove.icon
+              |         Ne
+            #subscribe-accept.ui.green.basic.inverted.button
+              i.checkmark.icon
+              |         Da
 
 block scripts
   scripts(src='/js/teams/popups.js')
