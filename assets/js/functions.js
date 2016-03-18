@@ -102,3 +102,13 @@ $('#nav-drawer-button').on('click', function(){
   $('.ui.sidebar').sidebar('toggle');
 
 });
+
+$('.checker').on('click', function(){
+
+  if($(this).hasClass('striked')){
+    $(this).removeClass('striked');
+  }else{
+    $(this).addClass('striked');
+  }
+
+});
